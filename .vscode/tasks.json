@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "cmake --build .",
+			"detail": "Build",
+			"options": {
+				"cwd": "${workspaceFolder}/build"
+			}
+		},
+		{
+			"label": "test",
+			"type": "shell",
+			"command": "ctest",
+			"detail": "Run all tests",
+			"options": {
+				"cwd": "${workspaceFolder}/build/test"
+			},
+			"args": [
+				"--output-on-failure"
+			],
+			"dependsOn": [
+				"build"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		}
+	]
+}

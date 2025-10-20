@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "cmake.preferredGenerators": [
+        "Ninja"
+    ],
+    "editor.defaultFormatter": "xaver.clang-format",
+    "clang-format.executable": "/usr/bin/clang-format-20"
+}
